@@ -5,10 +5,15 @@ let numberOfCols=120;
 
 let animator=undefined;
 
+// const endGame = function () {
+//   if (snake.getHead()==)
+// }
+
 const animateSnake=function() {
   let oldHead=snake.getHead();
   let oldTail=snake.move();
   let head=snake.getHead();
+  hasEnded(numberOfRows,numberOfCols,oldHead)
   paintBody(oldHead);
   unpaintSnake(oldTail);
   paintHead(head);

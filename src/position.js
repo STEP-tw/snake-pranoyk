@@ -43,9 +43,31 @@ Position.prototype.getCoord=function() {
   return [this.x,this.y];
 }
 
+Position.prototype.getXCoord = function() {
+  return this.x;
+}
+
+Position.prototype.getYCoord = function() {
+  return this.y;
+}
+
 const generateRandomPosition=function(maxX,maxY) {
   let x=generateRandomNumberBetween(0,maxX);
   let y=generateRandomNumberBetween(0,maxY);
   let direction=randomDirection();
   return new Position(x,y,direction);
+}
+
+const stopGame = function() {
+  clearInterval(animator);
+
+}
+
+const hasEnded = function (numberOfRows, numberOfCols, oldHead) {
+  if(oldHead['x']==1||oldHead['x']==numberOfCols-2) {
+    stopGame();
+  }
+  if(oldHead['y']==1||oldHead['y']==numberOfRows-2) {
+    stopGame();
+  }
 }
