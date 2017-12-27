@@ -60,14 +60,14 @@ const generateRandomPosition=function(maxX,maxY) {
 
 const stopGame = function() {
   clearInterval(animator);
-
+  document.getElementById("playAgain").stylesheet.visibility = 'visible';
 }
 
 const hasEnded = function (numberOfRows, numberOfCols, oldHead) {
-  if(oldHead['x']==1||oldHead['x']==numberOfCols-2) {
+  if(oldHead['x']==0||oldHead['x']==numberOfCols-1) {
     stopGame();
   }
-  if(oldHead['y']==1||oldHead['y']==numberOfRows-2) {
+  if(oldHead['y']==0||oldHead['y']==numberOfRows-1) {
     stopGame();
   }
 }

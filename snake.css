@@ -12,6 +12,11 @@
   height: 8px;
 }
 
+#playAgain {
+  visibility: hidden;
+  margin-left: 400px;
+}
+
 .snake {
   background-color: black;
 }
