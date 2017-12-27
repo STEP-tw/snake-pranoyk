@@ -57,17 +57,3 @@ const generateRandomPosition=function(maxX,maxY) {
   let direction=randomDirection();
   return new Position(x,y,direction);
 }
-
-const stopGame = function() {
-  clearInterval(animator);
-  document.getElementById("playAgain").stylesheet.visibility = 'visible';
-}
-
-const hasEnded = function (numberOfRows, numberOfCols, oldHead) {
-  if(oldHead['x']==0||oldHead['x']==numberOfCols-1) {
-    stopGame();
-  }
-  if(oldHead['y']==0||oldHead['y']==numberOfRows-1) {
-    stopGame();
-  }
-}
