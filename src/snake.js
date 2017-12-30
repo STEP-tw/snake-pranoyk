@@ -23,5 +23,10 @@ Snake.prototype={
   },
   turnRight:function() {
     this.head=this.head.turnRight();
+  },
+  hasEatenItself:function(head, body) {
+    for (let i = 0; i<body.length-1; i++) {
+      if (body[i]['x']==head['x']&&body[i]['y']==head['y'])
+        return stopGame();
   }
 }

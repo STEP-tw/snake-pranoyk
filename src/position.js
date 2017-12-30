@@ -51,6 +51,10 @@ Position.prototype.getYCoord = function() {
   return this.y;
 }
 
+// Position.prototype.hasHitWall = function(numberOfRows, numberOfCols, head) {
+//
+// }
+
 const generateRandomPosition=function(maxX,maxY) {
   let x=generateRandomNumberBetween(0,maxX);
   let y=generateRandomNumberBetween(0,maxY);

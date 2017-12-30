@@ -21,6 +21,15 @@ const animateSnake=function() {
   }
 }
 
+const stopGame = function() {
+  clearInterval(animator);
+  document.getElementById("playAgain").style.visibility = 'visible';
+}
+
+const hasEnded = function (numberOfRows,numberOfCols,head,body) {
+  snake.hasEatenItself(head, body);
+}
+
 const changeSnakeDirection=function(event) {
   switch (event.code) {
     case "KeyA":
